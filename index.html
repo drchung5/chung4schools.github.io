@@ -3,10 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Basic Website</title>
+    <title>David Chung - Cedar Rapids School Board</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header Section */
+        header {
+            background-color: #c8503c;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+        }
+        
+        .header-text h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .header-text h2 {
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #333;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #c8503c;
+        }
+        
+        /* Main Content Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+        
+        /* Biography Section */
+        .biography {
+            background-color: #f4e4a1;
+            padding: 30px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+        
+        .biography h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .biography p {
+            margin-bottom: 15px;
+        }
+        
+        /* Reasons Section */
+        .reasons {
+            background-color: white;
+        }
+        
+        .reasons h3 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #c8503c;
+        }
+        
+        .reason-item {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .reason-item:last-child {
+            border-bottom: none;
+        }
+        
+        .reason-item h4 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .reason-item p {
+            font-size: 1.1em;
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-text h1 {
+                font-size: 2em;
+            }
+            
+            .header-text h2 {
+                font-size: 1.2em;
+            }
+            
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            nav a {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This is a simple paragraph on my homepage.</p>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <img src="https://via.placeholder.com/150" alt="David Chung" class="profile-img">
+            <div class="header-text">
+                <h1>David Chung</h1>
+                <h2>Cedar Rapids School Board</h2>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#biography">Biography</a></li>
+            <li><a href="#reasons">Why I'm Running</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#support">Support</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Biography Sidebar -->
+        <aside class="biography" id="biography">
+            <h3>My Biography Here</h3>
+            <p>Add your background, experience, and qualifications here. Share your connection to the Cedar Rapids community and what drives your passion for education.</p>
+            <p>Include relevant professional experience, volunteer work, and personal story that makes you the right candidate for the school board.</p>
+        </aside>
+        
+        <!-- Reasons Section -->
+        <main class="reasons" id="reasons">
+            <h3>Why I'm Running</h3>
+            
+            <div class="reason-item">
+                <h4>• Reasons I am running</h4>
+                <p>Explain your primary motivation for running for school board. What issues or opportunities do you see that need addressing?</p>
+            </div>
+            
+            <div class="reason-item">
+                <h4>• More Reasons</h4>
+                <p>Detail additional priorities and goals you have for the school district. What changes or improvements do you want to champion?</p>
+            </div>
+            
+            <div class="reason-item">
+                <h4>• Still more reasons</h4>
+                <p>Share your vision for student success, teacher support, or community engagement in the schools.</p>
+            </div>
+            
+            <div class="reason-item">
+                <h4>• Yet more</h4>
+                <p>Discuss your stance on important educational topics like curriculum, funding, facilities, or student wellbeing.</p>
+            </div>
+            
+            <div class="reason-item">
+                <h4>• Even more</h4>
+                <p>Conclude with your commitment to the community and how voters can support your campaign.</p>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2025 David Chung for Cedar Rapids School Board</p>
+        <p>Contact: [Your Email] | [Your Phone] | [Social Media Links]</p>
+    </footer>
 </body>
 </html>
