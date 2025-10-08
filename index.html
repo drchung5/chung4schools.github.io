@@ -116,10 +116,11 @@
         /* Biography Section */
         .biography {
             background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            padding: 30px;
+            padding: 15px;
             border-radius: 8px;
             height: fit-content;
             border-left: 4px solid #3b82f6;
+            margin-bottom: 20px;
         }
         
         .biography h3 {
@@ -132,6 +133,41 @@
             margin-bottom: 15px;
         }
         
+        /* Election Info Section */
+        .election-info {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 15px;
+            border-radius: 8px;
+            height: fit-content;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .election-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #92400e;
+        }
+        
+        .election-info p {
+            margin-bottom: 15px;
+            color: #78350f;
+        }
+        
+        .election-info strong {
+            color: #92400e;
+        }
+
+        .election-info a {
+            color: #1e40af;
+            text-decoration: underline;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .election-info a:hover {
+            color: #3b82f6;
+        }
+
         /* Reasons Section */
         .reasons {
             background-color: white;
@@ -223,7 +259,7 @@
     
     <!-- Main Content -->
     <div class="container">
-        <!-- Biography Sidebar -->
+      <div>        <!-- Biography Sidebar -->
         <aside class="biography" id="biography">
           <h3>About David</h3>
           <p>
@@ -237,33 +273,44 @@
             David is running for the Cedar Rapids School Board to bring independent, thoughtful leadership that listens to parents, supports teachers, and puts students first.          
           </p>
         </aside>
+
+        <!-- Election Info Section -->
+        <aside class="election-info" id="election-info">
+            <h3>Election Information</h3>
+            <p>
+              David is running for School Board in District 2.
+              <strong>All</strong> voters in the Cedar Rapids Community School District can vote for David, regardless of where they live.
+            </p>
+            <p>Find your polling location at the Linn County Election Services <a target="_blank" href="https://www.linncountyiowa.gov/157/Election-Services">website</a>.</p>
+        </aside>
+      </div>
         
         <!-- Reasons Section -->
         <main class="reasons" id="reasons">
             <h3>A Vision for Our Schools</h3>
             
             <div class="reason-item">
-                <h4>• Restore trust and transparency</h4>
+                <h4>Restore trust and transparency</h4>
                 <p>Explain your primary motivation for running for school board. What issues or opportunities do you see that need addressing?</p>
             </div>
             
             <div class="reason-item">
-                <h4>• Support teachers and rebuild morale</h4>
+                <h4>Support teachers and rebuild morale</h4>
                 <p>Detail additional priorities and goals you have for the school district. What changes or improvements do you want to champion?</p>
             </div>
             
             <div class="reason-item">
-                <h4>• Focus on students not bureaucracy</h4>
+                <h4>Focus on students not bureaucracy</h4>
                 <p>Share your vision for student success, teacher support, or community engagement in the schools.</p>
             </div>
             
             <div class="reason-item">
-                <h4>• Be an independent voice</h4>
+                <h4>Be an independent voice</h4>
                 <p>Discuss your stance on important educational topics like curriculum, funding, facilities, or student wellbeing.</p>
             </div>
             
             <div class="reason-item">
-                <h4>• Protect neighborhood schools</h4>
+                <h4>Protect neighborhood schools</h4>
                 <p>Conclude with your commitment to the community and how voters can support your campaign.</p>
             </div>
         </main>
