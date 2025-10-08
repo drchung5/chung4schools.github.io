@@ -219,6 +219,17 @@
             margin-top: 40px;
         }
         
+        footer a.social-link {
+          color: white;
+          margin: 0 12px;
+          text-decoration: none;
+          transition: color 0.2s ease-in-out;
+        }
+
+        footer a.social-link:hover i {
+          color: #ffd700; /* or your campaign accent color */
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-text h1 {
@@ -366,36 +377,36 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
         <!-- Contact & Social Links -->
-        <div style="padding:10px; text-align:center;">
+         <div style="padding:10px; text-align:center; display:flex; justify-content:center; gap:16px;">
+
           <!-- Email -->
-          <a href="mailto:info@chung4schools.org" 
-            style="color:white; margin:0 12px; text-decoration:none;">
+          <a href="mailto:info@chung4schools.org" class="social-link" aria-label="Email">
             <i class="fa-solid fa-envelope fa-lg"></i>
           </a>
 
           <!-- Phone -->
-          <a href="tel:+13195551234" 
-            style="color:white; margin:0 12px; text-decoration:none;">
+          <a href="tel:+13195551234" class="social-link" aria-label="Phone">
             <i class="fa-solid fa-phone fa-lg"></i>
-          </a>
-
-          <!-- X (Twitter) -->
-          <a href="https://x.com/chung4schools" target="_blank" rel="noopener noreferrer"
-            style="color:white; margin:0 12px; text-decoration:none;">
-            <i class="fa-brands fa-x-twitter fa-lg"></i>
           </a>
 
           <!-- Facebook -->
           <a href="https://www.facebook.com/profile.php?id=61581074908028" target="_blank" rel="noopener noreferrer"
-            style="color:white; margin:0 12px; text-decoration:none;">
+            class="social-link" aria-label="Facebook">
             <i class="fa-brands fa-facebook fa-lg"></i>
+          </a>
+
+          <!-- X (Twitter) -->
+          <a href="https://x.com/chung4schools" target="_blank" rel="noopener noreferrer"
+            class="social-link" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter fa-lg"></i>
           </a>
 
           <!-- YouTube -->
           <a href="https://www.youtube.com/@chung4schools" target="_blank" rel="noopener noreferrer"
-            style="color:white; margin:0 12px; text-decoration:none;">
+            class="social-link" aria-label="YouTube">
             <i class="fa-brands fa-youtube fa-lg"></i>
           </a>
+
         </div>
       </p>
       <p>Paid for by Chung 4 Schools</p>
