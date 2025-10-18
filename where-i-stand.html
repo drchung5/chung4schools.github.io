@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231e3a8a'/%3E%3Cpath d='M50 15 L80 35 L80 80 L20 80 L20 35 Z' fill='white'/%3E%3Crect x='42' y='55' width='16' height='25' fill='%231e3a8a'/%3E%3Crect x='30' y='40' width='12' height='12' fill='%2360a5fa'/%3E%3Crect x='58' y='40' width='12' height='12' fill='%2360a5fa'/%3E%3Cpath d='M50 15 L50 25 L45 25 L50 20 L55 25 L50 25 Z' fill='%23fbbf24'/%3E%3C/svg%3E">
     
-    <title>Chung 4 Schools</title>
+    <title>Where I Stand - Chung 4 Schools</title>
     <style>
         * {
             margin: 0;
@@ -114,102 +114,81 @@
         nav a:hover {
             color: #60a5fa;
         }
+
+        nav a.active {
+            color: #fbbf24;
+            font-weight: bold;
+        }
         
-        /* Main Content Layout */
+        /* Main Content */
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-        }
-        
-        /* Biography Section */
-        .biography {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            padding: 15px;
-            border-radius: 8px;
-            height: fit-content;
-            border-left: 4px solid #3b82f6;
-            margin-bottom: 20px;
-        }
-        
-        .biography h3 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            color: #1e3a8a;
-        }
-        
-        .biography p {
-            margin-bottom: 15px;
-        }
-        
-        /* Election Info Section */
-        .election-info {
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-            padding: 15px;
-            border-radius: 8px;
-            height: fit-content;
-            border-left: 4px solid #f59e0b;
-        }
-        
-        .election-info h3 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            color: #92400e;
-        }
-        
-        .election-info p {
-            margin-bottom: 15px;
-            color: #78350f;
-        }
-        
-        .election-info strong {
-            color: #92400e;
         }
 
-        .election-info a {
-            color: #1e40af;
-            text-decoration: underline;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .election-info a:hover {
-            color: #3b82f6;
+        .page-title {
+            font-size: 2.5em;
+            color: #1e3a8a;
+            margin-bottom: 10px;
         }
 
-        /* Reasons Section */
-        .reasons {
-            background-color: white;
-        }
-        
-        .reasons h3 {
-            font-size: 2em;
-            margin-bottom: 30px;
-            color: #1e3a8a;
-        }
-        
-        .reason-item {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #eee;
-        }
-        
-        .reason-item:last-child {
-            border-bottom: none;
-        }
-        
-        .reason-item h4 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #1e40af;
-        }
-        
-        .reason-item p {
+        .page-subtitle {
             font-size: 1.1em;
             color: #666;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .posts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .post-card {
+            padding: 25px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .post-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .post-card h3 {
+            font-size: 1.4em;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        .post-card p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .post-card a {
+            display: inline-block;
+            color: #0070ba;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .post-card a:hover {
+            color: #3b82f6;
+            text-decoration: underline;
+        }
+
+        .post-date {
+            font-size: 0.9em;
+            color: #999;
+            margin-top: 12px;
+            font-style: italic;
         }
         
         /* Footer */
@@ -229,7 +208,7 @@
         }
 
         footer a.social-link:hover i {
-          color: #ffd700; /* or your campaign accent color */
+          color: #ffd700;
         }
 
         /* Responsive Design */
@@ -240,10 +219,6 @@
             
             .header-text h2 {
                 font-size: 1.2em;
-            }
-            
-            .container {
-                grid-template-columns: 1fr;
             }
             
             .nav-toggle {
@@ -271,6 +246,17 @@
                 display: block;
             }
 
+            .page-title {
+                font-size: 1.8em;
+            }
+
+            .post-card {
+                padding: 20px;
+            }
+
+            .post-card h3 {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
@@ -292,11 +278,12 @@
     <nav>
         <button class="nav-toggle" onclick="toggleMenu()">☰</button>
         <ul id="navMenu">
-            <li><a href="#biography">About David</a></li>
-            <li><a href="#reasons">A Vision for Our Schools</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#biography">About David</a></li>
+            <li><a href="index.html#reasons">A Vision for Our Schools</a></li>
             <li><a href="where-i-stand.html">Where I Stand</a></li>
-            <li><a href="#election-info">Election Info</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#election-info">Election Info</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
             <li>
               <form action="https://www.paypal.com/donate" method="post" target="_blank">
                 <input type="hidden" name="business" value="info@chung4schools.org" />
@@ -329,87 +316,63 @@
 
     <!-- Main Content -->
     <div class="container">
-      <div>        <!-- Biography Sidebar -->
-        <aside class="biography" id="biography">
-          <h3>About David</h3>
-          <p>
-            A lifelong Iowan and 35-year Cedar Rapids resident, David and his wife raised eight children in our public schools. 
-            For 22 years, they were active Jefferson Show Choir parents, and David volunteered throughout the district—from sewing costumes to running concessions and coaching MathCounts. 
-          </p>
-          <p>
-            With over three decades in the computer industry and experience teaching a semester-long programming class at a local high school, he understands both technology and education. 
-          </p>
-          <p>
-            David is running for the Cedar Rapids School Board to bring independent, thoughtful leadership that listens to parents, supports teachers, and puts students first.          
-          </p>
-        </aside>
-
-        <!-- Election Info Section -->
-        <aside class="election-info" id="election-info">
-            <h3>Election Information</h3>
-            <p>
-              David is running for School Board in District 2.
-              <strong>All</strong> voters in the Cedar Rapids Community School District can vote for David, regardless of where they live.
-            </p>
-            <p><strong>Election Day is November 4, 2025.</strong></p>
-            <p>Find your polling location at the Linn County Election Services <a target="_blank" href="https://www.linncountyiowa.gov/157/Election-Services">website</a>.</p>
-        </aside>
-      </div>
+        <h1 class="page-title">Where I Stand</h1>
+        <p class="page-subtitle">Updates and detailed perspectives on the issues that matter to Cedar Rapids schools.</p>
         
-        <!-- Reasons Section -->
-        <main class="reasons" id="reasons">
-            <h3>A Vision for Our Schools</h3>
-            
-            <div class="reason-item">
-                <h4>Restore trust and transparency</h4>
+        <div class="posts-list">
+
+            <div class="post-card">
+                <h3>Choosing a Superintendent</h3>
                 <p>
-                  Too often, the school board moves forward on major initiatives without building support from parents, teachers, or the community.
-                  The 2023 bond issue and the failed rollout of the freshman academies and career pathways are clear examples. 
-                  Families and educators deserve a voice in the process—and taxpayers deserve transparency about how and why decisions are made.  
-                  I’m running to restore trust by promoting open communication, honest reporting, and genuine collaboration.              
+                  Cedar Rapids and most other school districts hire superintendents in secrecy.
+                  I want to bring transparency to this important process.
                 </p>
-            </div>    
-            
-            <div class="reason-item">
-                <h4>Put students first</h4>
-                <p>
-                  Our schools face real challenges—more English Language Learners needing support, classrooms lacking adequate para educators, and tight budgets forcing difficult choices.
-                  Too much money goes to outside consultants instead of classrooms.
-                  We need strong STEM and career programs, but not by cutting music, arts, and activities that make education complete.
-                  I will fight for balanced priorities that give students a well-rounded education.
-                </p>
-            </div>
-            
-            <div class="reason-item">
-                <h4>Support teachers and rebuild morale</h4>
-                <p>
-                  Teachers are the heart of our schools.
-                  According to the district’s own survey, 47% of Kennedy teachers, 46% of Washington teachers, and 27% of Jefferson teachers have considered leaving. 
-                  Many describe a culture of fear and a lack of support from the district administration. 
-                  That is unacceptable. 
-                  I will work to build a culture where teachers feel heard, supported, and respected—because when teachers thrive, students do too.
-                </p>
+                <a href="https://youtu.be/iSWNKmZSh3Y" target="_blank">
+                  <i class="fa-brands fa-youtube fa-lg"></i> Listen on YouTube →</a>
+                <p class="post-date">Posted: October 18, 2025</p>
             </div>
 
-            <div class="reason-item">
-                <h4>Be an independent voice</h4>
+            <div class="post-card">
+                <h3>Interview with Doug Wagner from WMT Radio</h3>
                 <p>
-                  I’m not running to represent any special interest or political faction. 
-                  I will make decisions based on what’s right for students, teachers, and taxpayers—I will not be a <i>rubber stamp</i> for the administration. 
-                  We need independent thinkers on the board who will ask hard questions, insist on accountability, and put our community first.
-                  I am not afraid to stand alone when necessary, but I will always stand for what’s right.
+                  Doug and I talk about what's wrong with our schools and what I plan to do about it.
                 </p>
+                <a href="https://youtu.be/NKG4o9pYqT0" target="_blank">
+                  <i class="fa-brands fa-youtube fa-lg"></i> Listen on YouTube →</a>
+                <p class="post-date">Posted: October 16, 2025</p>
             </div>
-            
-            <div class="reason-item">
-                <h4>Protect neighborhood schools</h4>
+
+            <div class="post-card">
+                <h3>I oppose the current school bond referendum.</h3>
                 <p>
-                  Like many Cedar Rapids families, when we bought our home, we chose our neighborhood based on the local schools.
-                  In rejecting the 2023 bond issue, the community made it clear that neighborhood schools matter. 
-                  I will fight to keep them strong and vibrant.
-                </p>
+                  I am the only school board candidate who has publicly opposed the current bond referendum. 
+                  I am willing to stand alone for what is right!
+                  Find out why!
+                </p>    
+                <a href="https://www.facebook.com/chung4schools/posts/pfbid06hntaAoPTdpKpq7H9NDoBdoEgbFMXdKsFYeT7HsBrvPTUk3bcddxKnbL8cfDoAHkl?__cft__[0]=AZVhfLXixE6ugV8ec8EBwc-3mC0ENjm-yvknyXLKgjLv9-AZULCSpNyJ6ubuD_j8e-BBSyQZSodhzUwqTFvq9duQ2uiJbe016x3uQ52lcukPBMLp6nTNX9azV9DNebZFi4NtrJpOT0HHZqjHdFiG0a9LRBfTT9Xnv5p66uciNJ2tOIrAuzEC7Pbij-M-KZmU7vIRv4w78C-tKgSCnPtZWCz1&__tn__=%2CO%2CP-R" target="_blank">
+                  <i class="fa-brands fa-facebook fa-lg"></i> View on Facebook →</a>
+                <p class="post-date">Posted: October 15, 2025</p>
             </div>
-        </main>
+
+            <div class="post-card">
+                <h3>Back to School, But Not Just Back to Basics</h3>
+                <p>I support the basics, but I also believe that history, languages, music, and the arts are essential for a well-rounded education.</p>
+                <a href="https://www.thegazette.com/staff-columnists/back-to-school-but-not-just-back-to-basics/" target="_blank">
+                  <i class="fa-solid fa-newspaper fa-lg"></i> Read at The Gazette (you can click through the paywall for a limited number of articles) →
+                </a>
+                <p class="post-date">Posted: October 13, 2025</p>
+            </div>
+
+            <div class="post-card">
+                <h3>Cedar Rapids Schools need leadership</h3>
+                <p>This is my column in the Cedar Rapids Gazette outlining my reasons for running for the school board.</p>
+                <a href="https://www.thegazette.com/guest-columnists/cedar-rapids-schools-need-leadership/" target="_blank">
+                  <i class="fa-solid fa-newspaper fa-lg"></i> Read at The Gazette (you can click through the paywall for a limited number of articles) →
+                </a>
+                <p class="post-date">Posted: October 12, 2025</p>
+            </div>
+
+        </div>
     </div>
 
     <!-- Footer -->
